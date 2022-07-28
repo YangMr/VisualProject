@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>echarts demo</title>
+    <script src="js/echarts.js"></script>
+</head>
+<body>
+    <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+</body>
+</html>
+<script>
+    // 获取画布
+    const main = document.getElementById('main')
+
+    // 初始化echarts实例
+    const myChart = echarts.init(main)
+
+
+    // 定义图表数据
+    const option = {
+        // 配置标题
+        title:{
+            // text:'ECharts 入门示例'
+        },
+        // 配置提示
+        tooltip:{},
+        legend: {
+            data: ['新注册用户', '新增订单', '新增管理员']
+        },
+        // 配置X轴
+        xAxis: {
+            data: ['2022-7-22', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+        },
+        // 配置Y轴
+        yAxis: {},
+        // 配置图表Series数据
+        series: [
+            {
+                name: '新注册用户',
+                type: 'line',
+                data: [5, 20, 36, 10, 10, 20]
+            },
+            {
+                name: '新增订单',
+                type: 'line',
+                data: [15, 25, 41, 12, 13, 25]
+            },
+            {
+                name: '新增管理员',
+                type: 'line',
+                data: [12, 24, 41, 55,783, 15]
+            }
+        ]
+    }
+
+
+    // 将图表数据绘制到画布上
+    myChart.setOption(option)
+</script>

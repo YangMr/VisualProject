@@ -1,0 +1,19 @@
+.viewport{
+    display: flex;
+    min-width: 12.8rem;
+    max-width: 24rem;
+    min-height: 780px;
+    background:url("../image/logo.png") no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    padding : 1.1rem 0.25rem 0;
+    color : #fff;
+}
+.column{
+    flex : 3;
+    background: yellow;
+}
+.column:nth-child(2){
+    flex : 4;
+    background: pink;
+}
