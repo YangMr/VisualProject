@@ -1,0 +1,42 @@
+.monitor{
+    height : 6rem;
+}
+.monitor .inner{
+    padding: .3rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.monitor .tabs{
+    display: flex;
+    /*padding: 0 .45rem;*/
+    margin-bottom: 0.225rem;
+}
+.monitor .tabs li{
+    font-size : 0.225rem;
+    color : #4c9bfd;
+    cursor: pointer;
+}
+.monitor .tabs li.active{
+    color : #fff;
+}
+.monitor .tabs li:first-child{
+    border-right:1px solid #fff;
+    padding-right:15px;
+}
+.monitor .tabs li:last-child{
+    padding-left:15px;
+}
+.monitor .content{
+    background-color: red;
+    flex : 1;
+}
+.monitor .content .head{
+    display: flex;
+    justify-content: space-between;
+    color: #68d8fe;
+    font-size: 0.175rem;
+    background-color: rgba(255,255,255,0.3);
+}
+.monitor .content .head .col{
+
+}

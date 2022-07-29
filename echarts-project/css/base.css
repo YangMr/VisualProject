@@ -36,15 +36,20 @@ h4 {
     font-weight: 400;
 }
 
-@media screen and(max-width : 1024px){
+@media screen and (max-width : 1024px){
     html{
-        font-size : 42.66px !important;
+        background: red !important;
+        font-size : 42.66px!important;
+    }
+    .overview ul li span{
+        top : -14px!important;
     }
 }
 
-@media screen and(min-width : 1920px){
+@media screen and (min-width : 1920px){
     html{
-        font-size : 80px !important;
+        background: yellow !important;
+        font-size : 80px!important;
     }
 }
 
