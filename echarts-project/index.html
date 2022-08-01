@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="css/overview.css" type="text/css">
     <link rel="stylesheet" href="css/monitor.css" type="text/css">
     <link rel="stylesheet" href="css/point.css" type="text/css">
+    <link rel="stylesheet" href="css/map.css" type="text/css">
+    <link rel="stylesheet" href="css/users.css" type="text/css">
     <link rel="stylesheet" href="css/index.css" type="text/css">
     <script src="js/echarts.js"></script>
+    <script src="js/china.js"></script>
     <script src="js/flexible.js"></script>
     <script src="js/jquery.min.js"></script>
+    <script src="js/map.js"></script>
     <script src="js/index.js"></script>
 </head>
 <body>
@@ -205,7 +209,39 @@
             </div>
         </div>
         <div class="column">
-
+           <div class="map">
+               <h3>
+                   <i class="icon-cube"></i>
+                   <span>设备数据统计</span>
+               </h3>
+               <div class="chart">
+                   <div class="geo"></div>
+               </div>
+           </div>
+           <div class="panel users">
+               <div class="inner">
+                   <h3>全国用户总量统计</h3>
+                   <div class="chart">
+                       <div class="bar">柱状图</div>
+                       <div class="data">
+                           <div class="item">
+                               <h4>161,888</h4>
+                               <span>
+                                   <i class="icon-dot" style="color:#ed3f35;"></i>
+                                    用户总量
+                               </span>
+                           </div>
+                           <div class="item">
+                               <h4>248</h4>
+                               <span>
+                                   <i class="icon-dot" style="color:#ed3f35;"></i>
+                                    本月新增
+                               </span>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
         </div>
         <div class="column">
 

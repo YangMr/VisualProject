@@ -1,0 +1,21 @@
+.map{
+    height : 7.225rem;
+    margin-bottom: 0.25rem;
+    display: flex;
+    flex-direction: column;
+}
+.map h3{
+    padding : 0.2rem 0;
+}
+.map .chart{
+    flex : 1;
+    background-color: rgba(255,255,255,0.05);
+}
+.map .geo{
+    width: 100%;
+    height: 100%;
+}
+.viewport .column:nth-child(2) {
+    flex: 4;
+    margin: .4rem .25rem 0;
+}

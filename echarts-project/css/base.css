@@ -40,7 +40,6 @@ h4 {
 
 @media screen and (max-width : 1024px){
     html{
-        background: red !important;
         font-size : 42.66px!important;
     }
     .overview ul li span{
@@ -56,7 +55,6 @@ h4 {
 
 @media screen and (min-width : 1920px){
     html{
-        background: yellow !important;
         font-size : 80px!important;
     }
 }
