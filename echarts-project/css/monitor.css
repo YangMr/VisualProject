@@ -2,13 +2,13 @@
     height : 6rem;
 }
 .monitor .inner{
-    padding: .3rem 0;
+    padding: .3rem 0!important;
     display: flex;
     flex-direction: column;
 }
 .monitor .tabs{
     display: flex;
-    /*padding: 0 .45rem;*/
+    padding: 0 .45rem;
     margin-bottom: 0.225rem;
 }
 .monitor .tabs li{
@@ -27,16 +27,68 @@
     padding-left:15px;
 }
 .monitor .content{
-    background-color: red;
     flex : 1;
+    position: relative;
+    display: none;
 }
 .monitor .content .head{
     display: flex;
     justify-content: space-between;
     color: #68d8fe;
+    padding: 0.15rem 0.45rem;
     font-size: 0.175rem;
-    background-color: rgba(255,255,255,0.3);
+    line-height :  1.05;
+    background-color: rgba(255,255,255,0.1);
 }
-.monitor .content .head .col{
-
+.monitor .content .marquee-view{
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+}
+.monitor .row{
+    display: flex;
+    padding: 0.15rem 0.45rem;
+    justify-content: space-between;
+    font-size: 0.15rem;
+    line-height: 1.05;
+    color : #61a8ff;
+}
+.monitor .row .icon-dot{
+    position: absolute;
+    left: 0.2rem;
+    opacity: 0;
+}
+.monitor .row:hover {
+    background-color: rgba(255,255,255,0.1);
+    cursor: pointer;
+    color: #68d8fe;
+}
+.monitor .row:hover .icon-dot{
+    opacity: 1;
+}
+.monitor .col:first-child{
+    width: 1rem;
+}
+.monitor .col:nth-child(2){
+    width: 2.5rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.monitor .col:nth-child(3){
+    width: 1rem;
+}
+.marquee-view .marquee {
+    animation: move 15s linear infinite;
+}
+@keyframes move {
+    0%{}
+    100%{
+        transform: translateY(-50%);
+    }
+}
+.marquee-view .marquee:hover{
+    animation-play-state: paused;
 }

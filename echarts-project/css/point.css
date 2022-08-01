@@ -1,0 +1,36 @@
+.point{
+    height :4.25rem;
+}
+.point .pie{
+    width : 3.9rem;
+    height : 3rem;
+    margin-left: -0.125rem;
+}
+.point .chart{
+    display: flex;
+    justify-content: space-between;
+    margin-top : 0.3rem;
+}
+
+.point .chart .data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.1rem;
+    padding:.45rem .375rem;
+    background: url("../image/rect.png") no-repeat;
+    background-size: cover;
+}
+.point .chart .data .item:last-child{
+    margin-top: 15px;
+}
+.point .chart .data h4{
+    color : #fff;
+    font-size:0.35rem;
+    margin-bottom: 0.15rem;
+}
+.point .chart .data span{
+    color : #4c9bfd;
+    display: block;
+    font-size: 0.2rem;
+}

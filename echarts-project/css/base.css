@@ -36,6 +36,8 @@ h4 {
     font-weight: 400;
 }
 
+
+
 @media screen and (max-width : 1024px){
     html{
         background: red !important;
@@ -43,6 +45,12 @@ h4 {
     }
     .overview ul li span{
         top : -14px!important;
+    }
+}
+
+@media screen and (max-width : 1140px){
+    .chart .data{
+        width:  108px!important;
     }
 }
 
