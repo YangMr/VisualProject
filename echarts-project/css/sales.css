@@ -1,0 +1,39 @@
+.sales{
+    height: 3.1rem;
+
+}
+.sales .caption{
+    display: flex;
+    line-height: 1;
+}
+.sales .caption h3{
+    height: 0.225rem;
+    padding-right: 0.225rem;
+    border-right: 0.025rem solid #00f2f1;
+}
+.sales .caption .tabs{
+    display: flex;
+}
+.sales .caption .tabs a{
+    padding: 0.05rem;
+    font-size: 0.2rem;
+    margin: -0.0375rem 0 0 0.2625rem;
+    border-radius: 0.0375rem;
+    color: #0bace6;
+}
+.sales  .caption .tabs  a.active {
+    background-color: #4c9bfd;
+    color: #fff;
+}
+.sales .inner{
+    display: flex;
+    flex-direction: column;
+}
+.sales .chart{
+    flex : 1;
+    margin-top: 0.225rem;
+}
+.sales .chart .line{
+    width: 100%;
+    height: 100%;
+}

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/point.css" type="text/css">
     <link rel="stylesheet" href="css/map.css" type="text/css">
     <link rel="stylesheet" href="css/users.css" type="text/css">
+    <link rel="stylesheet" href="css/order.css" type="text/css">
+    <link rel="stylesheet" href="css/sales.css" type="text/css">
     <link rel="stylesheet" href="css/index.css" type="text/css">
     <script src="js/echarts.js"></script>
     <script src="js/china.js"></script>
@@ -244,7 +246,48 @@
            </div>
         </div>
         <div class="column">
-
+            <div class="panel order">
+                <div class="inner">
+                    <div class="tabs">
+                        <a class="active" data-type="day365" href="javascript:;">365天</a>
+                        <a data-type="day90" href="javascript:;">90天</a>
+                        <a data-type="day30" href="javascript:;">30天</a>
+                        <a data-type="day1" href="javascript:;">24小时</a>
+                    </div>
+                    <div class="data">
+                        <div class="item">
+                            <h4>30,321,988</h4>
+                            <span>
+                                <i class="icon-dot" style="color : #ed3f35"></i>
+                                订单量
+                            </span>
+                        </div>
+                        <div class="item">
+                            <h4>99882</h4>
+                            <span>
+                                <i class="icon-dot" style="color : #ed3f35"></i>
+                                销售额(万元)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel sales">
+                <div class="inner">
+                    <div class="caption">
+                        <h3>销售额统计</h3>
+                        <div class="tabs">
+                            <a class="active" href="javascript:;">年</a>
+                            <a href="javascript:;">季</a>
+                            <a href="javascript:;">月</a>
+                            <a href="javascript:;">周</a>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

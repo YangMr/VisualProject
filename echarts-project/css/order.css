@@ -1,0 +1,43 @@
+.order{
+    height: 1.875rem;
+}
+.order .tabs{
+    display: flex;
+    align-items: center;
+}
+.order .tabs a{
+    display: block;
+    height: 0.225rem;
+    line-height: 1;
+    color: #1950c4;
+    padding: 0 0.225rem;
+    font-size: 0.250rem;
+    border-right: 0.025rem solid #00f2f1;
+}
+.order .tabs a:first-child{
+    padding-left: 0;
+}
+.order .tabs a:last-child{
+    border-right: none;
+}
+.order .tabs a.active{
+    color: #fff;
+}
+.order .data{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.25rem;;
+}
+.order .data .item{
+    flex : 1;
+}
+.order h4 {
+    font-size: 0.35rem;
+    color: #fff;
+    margin-bottom: 0.025rem;
+}
+.order span {
+    display: block;
+    color: #4c9bfd;
+    font-size: 0.2rem;
+}
