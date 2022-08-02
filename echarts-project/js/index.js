@@ -82,41 +82,128 @@
 
 (function (){
     $(document).ready(function (){
+
+        let item = {
+            value : 1200,
+            itemStyle : {
+                color : '#254065'
+            },
+            tooltip : {
+                extraCssText : 'opacity : 0'
+            },
+            emphasis : {
+                itemStyle : {
+                    color : '#254065'
+                }
+            }
+        }
+
         const myChart = echarts.init(document.querySelector(".bar"))
 
         const option = {
+            color : {
+                type: 'linear',
+                x: 0,
+                y: 0,
+                x2: 0,
+                y2: 1,
+                colorStops: [{
+                    offset: 0, color: '#00fffb' // 0% 处的颜色
+                }, {
+                    offset: 1, color: '#0061ce' // 100% 处的颜色
+                }],
+                global: false // 缺省为 false
+            },
             tooltip: {
-                trigger: 'axis',
-                axisPointer: {
-                    type: 'shadow'
-                }
+                trigger: 'item',
+                borderWidth : 0,
+                backgroundColor : "rgba(0,0,0,0.3)",
+                textStyle : {
+                    color : "#fff"
+                },
+                formatter: "{a} <br/> {b} : {c}"
             },
             grid: {
-                left: '3%',
-                right: '4%',
-                bottom: '3%',
-                containLabel: true
+
+                    left: '0%',
+                    top : '3%',
+                    right: '3%',
+                    bottom: '3%',
+                    containLabel: true,
+                    show : true,
+                    borderColor : "rgba(0,240,255,0.3)"
+
             },
             xAxis: [
                 {
                     type: 'category',
-                    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    data: [
+                        "上海",
+                        "广州",
+                        "北京",
+                        "深圳",
+                        "合肥",
+                        "",
+                        "......",
+                        "",
+                        "杭州",
+                        "厦门",
+                        "济南",
+                        "成都",
+                        "重庆"
+                    ],
                     axisTick: {
-                        alignWithLabel: true
+                        alignWithLabel: false,
+                        show : false
+                    },
+                    axisLabel : {
+                        color : '#4c9bfd'
+                    },
+                    axisLine : {
+                        lineStyle :{
+                            color : "rgba(0,240,255,0.3)"
+                        }
                     }
                 }
             ],
             yAxis: [
                 {
-                    type: 'value'
+                    type: 'value',
+                    axisTick: {
+                        alignWithLabel: false,
+                        show : false
+                    },
+                    axisLabel:{
+                        color : "#4c9bfd"
+                    },
+
+                    splitLine : {
+                        lineStyle : {
+                            color : "rgba(0,240,255,0.3)"
+                        }
+                    }
                 }
             ],
             series: [
                 {
-                    name: 'Direct',
+                    name: '用户总量',
                     type: 'bar',
                     barWidth: '60%',
-                    data: [10, 52, 200, 334, 390, 330, 220]
+                    data: [
+                        2100,
+                        1900,
+                        1700,
+                        1560,
+                        1400,
+                        item,
+                        item,
+                        item,
+                        900,
+                        750,
+                        600,
+                        480,
+                        240
+                    ]
                 }
             ]
         }
