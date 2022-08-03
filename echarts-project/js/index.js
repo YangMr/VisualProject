@@ -21,7 +21,6 @@
 
 (function () {
     $(document).ready(function () {
-        console.log(document.querySelector(".pie"))
         const myChart = echarts.init(document.querySelector(".pie"))
 
         const option = {
@@ -311,7 +310,6 @@
         function toggle() {
             clearInterval(timer)
             timer = setInterval(() => {
-                console.log("123")
                 tabs()
                 _index += 1
                 if (_index >= 4) {
@@ -335,7 +333,6 @@
             $(".sales .tabs a").eq(_index).addClass("active").siblings().removeClass("active")
             const _type = $(".sales .tabs a").get(_index).dataset.type
             const _data = data[_type]
-            console.log(_data)
 
             option.xAxis.data = _data.info
             option.series[0].data = _data.detail[0]
@@ -531,4 +528,217 @@
     })
 })();
 
+(function () {
+    $(document).ready(function () {
+        const pie = document.querySelector(".quarter .pie")
+        const myChart = echarts.init(pie)
 
+        const option = {
+            color: [
+                {
+                    type: 'linear',
+                    x: 0,
+                    y: 0,
+                    x2: 0,
+                    y2: 1,
+                    colorStops: [{
+                        offset: 0, color: '#00c9e0' // 0% 处的颜色
+                    }, {
+                        offset: 1, color: '#005fc1' // 100% 处的颜色
+                    }],
+                    global: false // 缺省为 false
+                },
+                "#12274d"
+            ],
+            graphic: {
+                type: 'text',
+                left: 'center',
+                top: '50%',
+                z: 2,
+                zlevel: 100,
+                style: {
+                    text: '50' + '%',
+                    fill: '#fff',
+                    width: 100,
+                    height: 30,
+                    fontSize: 20
+                }
+            },
+            series: [
+                {
+                    name: 'Access From',
+                    type: 'pie',
+                    silent: 'ture',
+                    radius: ['130%', '150%'],
+                    center: ["48%", "80%"],
+                    avoidLabelOverlap: false,
+                    // label: {
+                    //     normal: {
+                    //         show: true,
+                    //         position: 'center',
+                    //         color: '#4c4a4a',
+                    //         formatter: '{total|' + 50 + '}' + '{active| %}',
+                    //         rich: {
+                    //             total: {
+                    //                 fontSize: 25,
+                    //                 fontFamily: "微软雅黑",
+                    //                 color: '#fff'
+                    //             },
+                    //             active: {
+                    //                 fontFamily: "微软雅黑",
+                    //                 fontSize: 12,
+                    //                 color: '#fff',
+                    //                 lineHeight: 30,
+                    //             },
+                    //         }
+                    //     },
+                    //     emphasis: {//中间文字显示
+                    //         show: true,
+                    //     }
+                    // },
+                    labelLine: {
+                        show: false
+                    },
+                    startAngle: 180,
+                    data: [
+                        {value: 100},
+                        {value: 100},
+                        {value: 200, itemStyle: {color: 'transparent'}},
+                    ]
+                }
+            ]
+        };
+
+        myChart.setOption(option)
+        window.addEventListener("resize", function () {
+            myChart.resize()
+        })
+    })
+})();
+
+(function () {
+    $(document).ready(function () {
+        const data = [
+            {
+                city: "北京", // 城市
+                sales: "35, 279", // 销售额
+                flag: true, //  上升还是下降
+                brands: [
+                    //  品牌种类数据
+                    {name: "华为", num: "9,086", flag: true},
+                    {name: "小米", num: "8,341", flag: true},
+                    {name: "oppo", num: "7,407", flag: false},
+                    {name: "vivo", num: "6,080", flag: false},
+                    {name: "荣耀", num: "6,724", flag: false},
+                    {name: "iphone", num: "2,170", flag: true}
+                ]
+            },
+            {
+                city: "河北",
+                sales: "23,252",
+                flag: false,
+                brands: [
+                    {name: "华为", num: "3,457", flag: false},
+                    {name: "小米", num: "2,124", flag: true},
+                    {name: "oppo", num: "8,907", flag: false},
+                    {name: "vivo", num: "6,080", flag: true},
+                    {name: "荣耀", num: "1,724", flag: false},
+                    {name: "iphone", num: "1,170", flag: false}
+                ]
+            },
+            {
+                city: "上海",
+                sales: "20,760",
+                flag: true,
+                brands: [
+                    {name: "华为", num: "2,345", flag: true},
+                    {name: "小米", num: "7,109", flag: true},
+                    {name: "oppo", num: "3,701", flag: false},
+                    {name: "vivo", num: "6,080", flag: false},
+                    {name: "荣耀", num: "2,724", flag: false},
+                    {name: "iphone", num: "2,998", flag: true}
+                ]
+            },
+            {
+                city: "江苏",
+                sales: "23,252",
+                flag: false,
+                brands: [
+                    {name: "华为", num: "2,156", flag: false},
+                    {name: "小米", num: "2,456", flag: true},
+                    {name: "oppo", num: "9,737", flag: true},
+                    {name: "vivo", num: "2,080", flag: true},
+                    {name: "荣耀", num: "8,724", flag: true},
+                    {name: "iphone", num: "1,770", flag: false}
+                ]
+            },
+            {
+                city: "山东",
+                sales: "20,760",
+                flag: true,
+                brands: [
+                    {name: "华为", num: "9,567", flag: true},
+                    {name: "小米", num: "2,345", flag: false},
+                    {name: "oppo", num: "9,037", flag: false},
+                    {name: "vivo", num: "1,080", flag: true},
+                    {name: "荣耀", num: "4,724", flag: false},
+                    {name: "iphone", num: "9,999", flag: true}
+                ]
+            }
+        ]
+        let supHtml = ""
+        $.each(data, function (i, item) {
+            supHtml += `
+                <li>
+                    <span>${item.city}</span>
+                    <span>${item.sales}<s class="${item.flag ? 'icon-up' : 'icon-down'}"></s></span>
+                </li>
+            `
+        })
+        $(".province .sup").html(supHtml)
+        $(".province .sup li").eq(0).addClass("active")
+        const firstData = data[0].brands
+
+        function renderHtml(params){
+            let subHtml = ""
+            $.each(params, function (i, item) {
+                subHtml += `
+                <li>
+                  <span>${item.name}</span>
+                  <span>${item.num}<s class="${item.flag ? 'icon-up' : 'icon-down'}"></s></span>
+                </li>
+            `
+            })
+            $(".province .sub").html(subHtml)
+        }
+        renderHtml(firstData)
+
+        let _index = 0
+        $(".province .sup").on("mouseenter",'li',function () {
+            clearInterval(timer)
+            _index = $(this).index()
+            $(this).addClass("active").siblings().removeClass("active")
+            const currentData = data[_index].brands
+            renderHtml(currentData)
+        })
+
+        $(".province .sup").on("mouseleave",'li',function () {
+            autoPlay()
+        })
+
+        let timer = null
+        function autoPlay(){
+           timer = setInterval(()=>{
+                _index+=1
+                if(_index>=5){
+                    _index = 0
+                }
+                $(".province .sup li").eq(_index).addClass("active").siblings().removeClass("active")
+                const currentData = data[_index].brands
+                renderHtml(currentData)
+            },1000)
+        }
+        autoPlay()
+
+    })
+})();

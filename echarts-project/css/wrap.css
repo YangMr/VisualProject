@@ -29,3 +29,41 @@
     width: 100%;
     height: 100%;
 }
+
+.quarter .inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.quarter .chart {
+    flex: 1;
+}
+
+.quarter .chart .pie {
+    height: 65px;
+    margin: 0.05rem 0;
+}
+
+.quarter .chart .data {
+    display: flex;
+}
+
+.quarter .chart .data .item {
+    width: 50%;
+}
+
+.quarter .chart .data h4 {
+    color: #fff;
+    font-size: 0.35rem;
+    margin-bottom: 0.05rem;
+    white-space: nowrap;
+}
+
+.quarter .chart .data span {
+    color: #4c9bfd;
+    display: block;
+    font-size: 0.15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
